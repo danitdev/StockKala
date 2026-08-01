@@ -10,7 +10,7 @@ app.set("views","views")
 app.use(bodyParser.urlencoded({extend:false}));
 app.use(express.static(path.join(rootDir,"public")));
 
-sequelize.sync()
+sequelize.sync({force:true})
     .then(result=>{
         app.listen(3000);
     })
