@@ -6,6 +6,7 @@
 
     <%- include("../includes/navigation") %>
 
+
     <main class="form-container">
 
         <h1 class="page-title">
@@ -13,7 +14,8 @@
         </h1>
 
 
-        <form action="/categories/edit/<%= category.id %>" method="POST">
+        <form action="/categories/add" method="POST">
+
 
             <div class="form-control">
 
@@ -25,25 +27,19 @@
                     type="text"
                     name="name"
                     id="name"
-                    value="<%= category.name %>"
                     required
                 >
 
             </div>
 
 
-            <input 
-                type="hidden" 
-                name="categoryId" 
-                value="<%= category.id %>"
-            >
-
-
             <button class="btn success" type="submit">
-                Update Category
+                Add Category
             </button>
 
+
         </form>
+
 
     </main>
 
