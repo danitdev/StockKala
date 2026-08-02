@@ -46,7 +46,7 @@ export const postDeleteCategories = (req,res,next)=>{
 export const getAddCategories = (req,res,next)=>{
     res.render("categories/add-category",{pageTitle:"Add Category",path:"/categories/add"});
 };
-export const postAddCategoris = (req,res,next)=>{
+export const postAddCategories = (req,res,next)=>{
     const name = req.body.name;
     Category.create({
         name:name
