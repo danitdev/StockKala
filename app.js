@@ -18,6 +18,7 @@ app.use(express.static(path.join(rootDir,"public")));
 
 app.use("/categories",categoryRouter);
 app.use(throw404)
+
 Product.belongsTo(Category);
 Category.hasMany(Product);
 

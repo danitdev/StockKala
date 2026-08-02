@@ -1,0 +1,39 @@
+<%- include("../includes/head") %>
+<link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/forms.css">
+
+    <main class="form-container">
+        <h1><%= pageTitle %></h1>
+
+        <form action="/categories/edit" method="POST">
+
+            <div class="form-control">
+                <label for="name">Category Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    value="<%= category.name %>"
+                    required
+                >
+            </div>
+
+            <input 
+                type="hidden" 
+                name="categoryId" 
+                value="<%= category.id %>"
+            >
+
+            <button type="submit">
+                Update Category
+            </button>
+
+        </form>
+    </main>
+
+    <%- include("../includes/end") %>
+</body>

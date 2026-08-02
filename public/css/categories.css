@@ -1,0 +1,93 @@
+.categories-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.categories-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.category-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.category-table th,
+.category-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.category-table th {
+    background: #00695c;
+    color: white;
+}
+
+.category-table tbody tr:hover {
+    background: #f7f7f7;
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.actions form {
+    margin: 0;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 0.45rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border: none;
+    transition: 0.2s;
+}
+
+.btn-edit {
+    background: #2196f3;
+    color: white;
+}
+
+.btn-edit:hover {
+    background: #1976d2;
+}
+
+.btn-delete {
+    background: #e53935;
+    color: white;
+}
+
+.btn-delete:hover {
+    background: #c62828;
+}
+
+.btn-add {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background: #2e7d32;
+    color: white;
+}
+
+.btn-add:hover {
+    background: #1b5e20;
+}
+
+.add-category {
+    text-align: center;
+}
+
+.empty-message {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #777;
+    margin-top: 3rem;
+}
