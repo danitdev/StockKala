@@ -6,3 +6,11 @@ export const getCategories = (req,res,next)=>{
         })
         .catch(err=>console.log(err));
 };
+export const getEditCategories = (req,res,next)=>{
+    const categoryId = req.params.categoryId;
+    Category.findByPk(categoryId)
+        .then(category=>{
+            res.render("categories/edit-category",{pageTitle:"Edit Category",path:"/categories",category});
+        })
+        .catch(err=>console.log(err));
+};
