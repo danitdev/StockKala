@@ -9,7 +9,7 @@
     <main class="form-container">
         <h1><%= pageTitle %></h1>
 
-        <form action="/categories/edit" method="POST">
+        <form action="/categories/edit/<%=category.id%>" method="POST">
 
             <div class="form-control">
                 <label for="name">Category Name</label>
