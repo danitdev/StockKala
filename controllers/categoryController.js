@@ -48,5 +48,9 @@ export const getAddCategories = (req,res,next)=>{
 };
 export const postAddCategoris = (req,res,next)=>{
     const name = req.body.name;
-    
+    Category.create({
+        name:name
+    })
+        .then(()=>res.redirect("/categories"))
+        .catch(err=>console.log(err));
 };
