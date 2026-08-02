@@ -43,3 +43,10 @@ export const postDeleteCategories = (req,res,next)=>{
         })
         .catch(err=>console.log(err));
 };
+export const getAddCategories = (req,res,next)=>{
+    res.render("categories/add-category",{pageTitle:"Add Category",path:"/categories/add"});
+};
+export const postAddCategoris = (req,res,next)=>{
+    const name = req.body.name;
+    
+};
