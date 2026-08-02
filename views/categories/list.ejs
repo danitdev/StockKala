@@ -1,0 +1,54 @@
+<%- include("../includes/head") %>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/categories.css">
+</head>
+
+<body>
+    <%- include("../includes/navigation") %>
+
+    <main class="categories-container">
+        <h1><%= pageTitle %></h1>
+
+        <% if (categories.length === 0) { %>
+            <p class="empty-message">No categories found.</p>
+        <% } else { %>
+            <table class="category-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% categories.forEach(category => { %>
+                        <tr>
+                            <td><%= category.name %></td>
+                            <td><%= category.description %></td>
+                            <td class="actions">
+                                <a class="btn btn-edit" href="/categories/edit/<%= category.id %>">
+                                    Edit
+                                </a>
+
+                                <form action="/categories/delete/<%= category.id %>" method="POST">
+                                    <button class="btn btn-delete" type="submit">
+                                        Delete
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } %>
+
+        <div class="add-category">
+            <a class="btn btn-add" href="/categories/add">
+                + Add Category
+            </a>
+        </div>
+    </main>
+
+    <%- include("../includes/end") %>
+</body>
