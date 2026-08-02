@@ -7,7 +7,7 @@ import { sequelize } from "./utils/database.js";
 import { Product } from "./models/product.js";
 import { Category } from "./models/category.js";
 import { seedCategories } from "./seeders/categorySeeder.js";
-
+import { throw404 } from "./controllers/throw404.js";
 const app = express();
 
 app.set("view engine","ejs");
@@ -17,7 +17,7 @@ app.use(express.static(path.join(rootDir,"public")));
 
 
 app.use("/categories",categoryRouter);
-
+app.use(throw404)
 Product.belongsTo(Category);
 Category.hasMany(Product);
 
