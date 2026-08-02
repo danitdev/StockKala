@@ -31,3 +31,15 @@ export const postEditCategories = (req,res,next)=>{
         })
         .catch(err => console.log(err));
 };
+export const postDeleteCategories = (req,res,next)=>{
+    const categoryId = req.params.categoryId;
+    Category.findByPk(categoryId)
+        .then(category => {
+            return category.destroy();
+        })
+        .then(result=>{
+            console.log("DESTROYED PRODUCT");
+            res.redirect("/categories");
+        })
+        .catch(err=>console.log(err));
+};
