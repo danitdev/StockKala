@@ -3,6 +3,7 @@ import path from "path";
 import bodyParser from "body-parser";
 import rootDir from "./utils/path.js";
 import { router as categoryRouter} from "./routes/categoryRoutes.js";
+import { router as productRouter} from "./routes/productRoutes.js";
 import { sequelize } from "./utils/database.js";
 import { Product } from "./models/product.js";
 import { Category } from "./models/category.js";
@@ -17,7 +18,8 @@ app.use(express.static(path.join(rootDir,"public")));
 
 
 app.use("/categories",categoryRouter);
-app.use(throw404)
+app.use("/products",productRouter);
+app.use(throw404);
 
 Product.belongsTo(Category);
 Category.hasMany(Product);
