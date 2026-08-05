@@ -6,3 +6,6 @@ export const getProducts = (req,res,next)=>{
         })
         .catch(err=>console.log(err));
 };
+export const getCreateProduct = (req,res,next)=>{
+    res.render("products/create",{pageTitle:"Add Product",path:"/products/create"});
+};
