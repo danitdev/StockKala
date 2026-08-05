@@ -391,3 +391,28 @@ main {
   color: #777;
   margin-top: 2rem;
 }
+
+/* Product page */
+
+.page-header {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+.product-image {
+    width:60px;
+    height:60px;
+    object-fit:cover;
+    border-radius:6px;
+}
+
+
+.stock-warning {
+    color:red;
+    font-weight:bold;
+}
