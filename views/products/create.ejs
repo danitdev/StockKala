@@ -1,0 +1,128 @@
+<%- include("../includes/head") %>
+
+</head>
+
+<body>
+
+    <%- include("../includes/navigation") %>
+
+    <main class="form-container">
+
+        <h1 class="page-title">
+            <%= pageTitle %>
+        </h1>
+
+
+        <form action="/products/create" method="POST">
+
+
+            <div class="form-control">
+
+                <label for="name">
+                    Product Name
+                </label>
+
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-control">
+
+                <label for="sku">
+                    SKU
+                </label>
+
+                <input
+                    type="text"
+                    name="sku"
+                    id="sku"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-control">
+
+                <label for="price">
+                    Price
+                </label>
+
+                <input
+                    type="number"
+                    name="price"
+                    id="price"
+                    step="0.01"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-control">
+
+                <label for="stockQuantity">
+                    Stock Quantity
+                </label>
+
+                <input
+                    type="number"
+                    name="stockQuantity"
+                    id="stockQuantity"
+                    min="0"
+                    value="0"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-control">
+
+                <label for="description">
+                    Description
+                </label>
+
+                <textarea
+                    name="description"
+                    id="description">
+                </textarea>
+
+            </div>
+
+
+            <div class="form-control">
+
+                <label for="imageUrl">
+                    Image URL
+                </label>
+
+                <input
+                    type="url"
+                    name="imageUrl"
+                    id="imageUrl"
+                >
+
+            </div>
+
+
+            <button class="btn success" type="submit">
+                Create Product
+            </button>
+
+
+        </form>
+
+
+    </main>
+
+
+    <%- include("../includes/end") %>
+
+</body>
