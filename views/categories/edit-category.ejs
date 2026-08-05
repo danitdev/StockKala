@@ -1,5 +1,7 @@
 <%- include("../includes/head") %>
+
 <link rel="stylesheet" href="/css/main.css">
+
 </head>
 
 <body>
@@ -12,8 +14,7 @@
             <%= pageTitle %>
         </h1>
 
-
-        <form action="/categories/edit" method="POST">
+        <form action="/categories/edit/<%= category.id %>" method="POST">
 
             <div class="form-control">
 
@@ -31,13 +32,11 @@
 
             </div>
 
-
             <input 
                 type="hidden" 
                 name="categoryId" 
                 value="<%= category.id %>"
             >
-
 
             <button class="btn success" type="submit">
                 Update Category
@@ -46,7 +45,6 @@
         </form>
 
     </main>
-
 
     <%- include("../includes/end") %>
 
